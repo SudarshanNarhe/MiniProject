@@ -1,0 +1,107 @@
+
+
+
+<div class="container mt-5">
+
+    <div class="form-area">
+    
+    <h3>SignUp</h3>
+    
+    <form #contactForm="ngForm" (ngSubmit)="contactForm.form.valid && onSubmit()" novalidate>
+        
+        <div class="form-group">
+            <label for="firstName">First Name : </label> 
+            <input type="text" name="firstName" required #firstName="ngModel"
+            [(ngModel)]="Mycontact.firstName" class="form-control" id="firstName">
+        </div>
+        <div *ngIf="!firstName.valid && (firstName.dirty || firstName.touched)" class="error">
+            <div *ngIf="firstName.errors?.['required']">
+                <p>First Name is required</p>
+            </div>
+        </div>
+            <div class="form-group">
+                <label for="lastName">Last Name : </label> 
+                <input type="text" name="lastName" required #lastName="ngModel"
+                [(ngModel)]="Mycontact.lastName" class="form-control" id="lastName">
+            </div>
+            <div *ngIf="!lastName.valid && (lastName.dirty || lastName.touched)" class="error">
+                <div *ngIf="lastName.errors?.['required']">
+                    <p>Last Name is required</p>
+                </div>
+            </div>
+        <div class="form-group">
+            <label for="username">User Name : </label> 
+            <input type="text" name="username" required minlength="8" #username="ngModel"
+            [(ngModel)]="Mycontact.username" class="form-control" id="username">
+        </div>
+        <div *ngIf="!username?.valid && (username?.dirty || username?.touched)" class="error">
+            <div *ngIf="username.errors?.['required']">
+                <p>username Name is required</p>
+            </div>
+            <div *ngIf="username.errors?.['minlength']">
+                <p>username name minimum length is {{username.errors?.['minlength']?.requiredLength}}</p>
+            </div>
+        </div>
+        <div>
+            <div class="form-group">
+                <label for="email">Email : </label>
+                <input type="text" name="email" required mail #email="ngModel"
+                 [(ngModel)]="Mycontact.email" 
+                 pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                 class="form-control" id="email">
+            </div>
+            <div *ngIf="!email.valid && (email?.dirty || email?.touched)" class="error">
+                <div *ngIf="email.errors?.['required']">
+                    <p>Email is required</p>
+                </div>
+                <div *ngIf="email.errors?.['pattern']">
+                    <p>Invalid Email address</p>
+                </div>
+            </div>
+        </div>
+    
+        <div>
+            <div class="form-group">
+                <label for="password">Password : </label>
+                <input type="password" name="password" required #password="ngModel"
+                 [(ngModel)]="Mycontact.password" 
+                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                 class="form-control" id="password">
+            </div>
+            <div *ngIf="!password.valid && (password.dirty || password.touched)" class="error">
+                <div *ngIf="password.errors?.['required']">
+                    <p>Password is required</p>
+                </div>
+                <div *ngIf="password.errors?.['pattern']">
+                    <p>Must contain at least <b>1 Number</b> and<b> 1 UpperCase</b> and <b>lowercase letter</b> , and at least 8 or more characters</p>
+                </div>
+            </div>
+        </div>
+    
+        <div>
+            <div class="form-group">
+                <label for="confirmPass">Confirm Password : </label>
+                <input type="password" name="confirmPass" required #confirmPass="ngModel"
+                 [(ngModel)]="Mycontact.confirmPass" 
+                 [pattern]="Mycontact.password"
+                 class="form-control" id="confirmPass">
+            </div>
+            <div *ngIf="!confirmPass.valid && (confirmPass.dirty || confirmPass.touched)" class="error">
+                <div *ngIf="confirmPass.errors?.['required']">
+                    <p>Password is required</p>
+                </div>
+                <div *ngIf="confirmPass.errors?.['pattern']">
+                    <p>Password not match</p>
+                </div>
+            </div>
+        </div>
+    
+          <div>
+            <button type="submit" [disabled]="!contactForm.valid" class="btn btn-primary" >Submit</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+          </div>
+
+    </form>
+    </div>
+    </div>
+

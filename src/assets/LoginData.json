@@ -1,0 +1,11 @@
+{
+    "data":[
+        {   
+            "firstName":"Admin",
+            "lastName":"Admin",
+           "username":"admin",
+            "password":"admin",
+            "mail":"admin@gmail.com"
+        }
+    ]
+}
