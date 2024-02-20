@@ -24,9 +24,9 @@ export class LoginDataService {
       lastName:User.lastName,
       username:User.username,
       password:User.password,
-      mail:User.mail
+      mail:User.email
     }
-    return this.myClient.put<any>(this.url,userdata).pipe(catchError(this.errorHandler));
+    return this.myClient.post<any>(this.url,userdata).pipe(catchError(this.errorHandler));
    }
 
    errorHandler(error:any){
@@ -46,5 +46,6 @@ export class LoginDataService {
     
       return this.myClient.put<any>(`${this.url}'/'${username}`,user).pipe(this.errorHandler)
    }
+   
 
 }

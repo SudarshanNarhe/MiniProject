@@ -1,5 +1,5 @@
 
-.navbar{
+/* .navbar{
     background-color: bisque;
     padding: 12px;
 }
@@ -22,4 +22,8 @@
     margin-left: 300px;
     margin-right: 200px; 
 
-  }
+  } */
+
+  mat-toolbar{
+    justify-content: space-between;
+}

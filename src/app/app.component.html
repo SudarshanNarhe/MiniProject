@@ -1,6 +1,6 @@
 
 
-<nav class="navbar navbar-expand-lg navbar-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
@@ -9,7 +9,17 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
+
+<mat-toolbar color="primary">
+  <span><mat-icon>apps</mat-icon>My Project</span>
+  <button mat-raised-button [routerLink]="['/Login']"><mat-icon>login</mat-icon>Login</button>
+  <button mat-raised-button [routerLink]="['/Home']"><mat-icon>home</mat-icon>Home</button>
+  <!-- <button mat-raised-button [routerLink]="['/About_Us']"><mat-icon>info</mat-icon>About us</button> -->
+  
+</mat-toolbar>
+<br>
+
 <router-outlet></router-outlet>
 
 <app-sign-up></app-sign-up>

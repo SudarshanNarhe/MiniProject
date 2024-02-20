@@ -1,4 +1,9 @@
 
+h3{
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: center;
+}
 
 /* Styles for form container */
 .container {
@@ -20,7 +25,8 @@
   }
   
   label {
-    font-weight: bold;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .error {
