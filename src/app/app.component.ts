@@ -7,6 +7,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { UserPageComponent } from './user-page/user-page.component';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
     SignUpComponent,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    UserPageComponent
 
   ],
   

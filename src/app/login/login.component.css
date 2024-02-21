@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form {
+    width: 350px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-full-width {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    width: 100px;
+    margin-top: 15px;
+  }
+  
+  /* Styling for Login and SignUp buttons */
+  button:nth-of-type(1) {
+    margin-right: 40px; /* Add some space between buttons */
+  }
+  
+  /* Styling for slide toggle */
+  mat-slide-toggle {
+    margin-top: 20px;
+  }
+  
+  /* Center align mat-icon */
+  mat-icon {
+    vertical-align: middle;
+  }
+
+  p{
+    color: red;
+    font-size: 14px;
+  }
+  
+  

@@ -4,6 +4,7 @@ import { FormsModule,} from '@angular/forms';
 import { LoginDataService } from '../login-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 
 
@@ -20,7 +21,7 @@ export class SignUpComponent implements OnInit{
   Mycontact!:any;
   // User!:FormGroup;
 
-constructor(public myUser : LoginDataService, public msg:MatSnackBar){
+constructor(public myUser : LoginDataService, public msg:MatSnackBar, private router:Router){
 
 }
 
@@ -32,7 +33,6 @@ constructor(public myUser : LoginDataService, public msg:MatSnackBar){
         email:"",
         password:"",
         confirmPass:"",
-        gender:false,
       }
   }
 
@@ -42,6 +42,7 @@ constructor(public myUser : LoginDataService, public msg:MatSnackBar){
     this.myUser.AddUser(this.Mycontact).subscribe(result=>{
       this.AfterSubmitMsg('User registration successful!', 'Close');
     });
+    this.router.navigate(['/Login']);
   }
 
     AfterSubmitMsg(Message: string, action:string){

@@ -1,10 +1,16 @@
 
-<form>
-    <mat-form-field>
-        <mat-label>Username : </mat-label>
-        <input matInput placeholder="sudarshannarhe" >
-        <mat-label>Password : </mat-label>
-        <input matInput placeholder="sudarshan#111" >
+<div class="container">
+    <form class="form" (ngSubmit)="login()">
+    <mat-form-field class="form-full-width">
+        <mat-label><mat-icon>person</mat-icon> Username : </mat-label>
+        <input matInput [(ngModel)]="username" [ngModelOptions]="{ standalone: true }">
     </mat-form-field>
-        
+    <mat-form-field class="form-full-width">
+        <mat-label><mat-icon>lock</mat-icon> Password : </mat-label>
+        <input matInput type="password" [(ngModel)]="password" [ngModelOptions]="{ standalone: true }">
+    </mat-form-field>
+         <div *ngIf="error" class="error"><p>{{error}}</p></div>
+        <button type="submit" mat-raised-button color="primary">Login</button>
+        <button type="button" mat-raised-button color="primary" (click)="opensignUp()">SignUp</button>       
 </form>
+</div>
