@@ -46,11 +46,18 @@ export class LoginComponent {
       const user=result.find(u =>u.username===this.username && u.password===this.password);
       if(user){
        console.log('Login Succesful')
+       if(user.username=='admin' && user.password=='admin'){
+            this.router.navigate(['/AdminPage'])
+       }else{
+          this.router.navigate(['/UserPage'])
+       }
       }else{
         this.error='Invalid username or password';
       }
     })
   }
+
+
   
   opensignUp() {
     this.router.navigate(['/SignUp']);

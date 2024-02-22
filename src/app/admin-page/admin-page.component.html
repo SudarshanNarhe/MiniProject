@@ -1,4 +1,43 @@
 
+<div style="display: flex; justify-content: flex-end; gap: 5px; margin-right: 5px; margin-top: 5px;">
+    <button class="btn btn-dark" (click)="toggleProductForm()" >Add Product</button>
+  </div>
+  
+  <!-- Form for adding new product --> 
+  <div *ngIf="showForm" class="container-fluid col-11 form-container">
+    <form #productForm="ngForm" (ngSubmit)="productForm.form.valid &&  AddProduct(productForm)" novalidate > 
+
+        <div class="form-group">
+            <label for="productId" class="form-label">Product Id</label>
+            <input type="text" class="form-control" id="productId" [(ngModel)]="newProduct.id" name="id" required>
+          </div>
+
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input type="text" class="form-control" id="productName" [(ngModel)]="newProduct.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="productPrice">Product Price</label>
+        <input type="text" class="form-control" id="productPrice" [(ngModel)]="newProduct.price" name="price" required>
+      </div>
+      <div class="form-group">
+        <label for="productDescription">Product Description</label>
+        <textarea class="form-control" id="productDescription" [(ngModel)]="newProduct.description" name="description" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="productImage">Product Image URL</label>
+        <input type="text" class="form-control" id="productImage" [(ngModel)]="newProduct.image" name="image" required>
+      </div>
+      <button type="submit" class="btn btn-dark btn-group" *ngIf="!isUpdate" >Add New Product</button>
+      <button type="submit" class="btn btn-dark btn-group" *ngIf="isUpdate">Update Information</button>
+      <button class="btn btn-dark btn-group" (click)="hideForm()">Return</button>
+    </form>
+    
+    {{productForm.value | json}} 
+  </div>
+
+<h3 >Product Details</h3>
+
 <div class="container mt-3">
 <table class="table table-striped">
     
@@ -19,7 +58,7 @@
             <td>{{prod.price}}</td>
             <td class="wide-column"><img src="{{prod.image}}" alt="Image" class="product-image"></td>
             <td>
-                <button class="btn btn-warning">Update</button>
+                <button class="btn btn-warning" (click)=" toggleforUpdate(prod)">Update</button>
                 <button class="btn btn-danger" (click)="deleteItem(prod.id)">Delete</button>
             </td>
         </tr>

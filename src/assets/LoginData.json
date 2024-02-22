@@ -50,8 +50,8 @@
     }
   ],
   "products": [
-    { 
-      "id":"1",
+    {
+      "id": "1",
       "name": "Xiaomi Pad 6",
       "description": "Xiaomi Pad 6 having Snapdragon 870 Octa-Core Processor",
       "image": "/assets/Tablet1.jpg",
@@ -60,9 +60,9 @@
     {
       "id": "2",
       "name": "Samsung",
+      "price": "62,000",
       "description": "Samsung having Snapdragon 870 Octa-Core Processor",
-      "image": "/assets/Tablet2.jpg",
-      "price": "62,000"
+      "image": "/assets/Tablet2.jpg"
     },
     {
       "id": "3",

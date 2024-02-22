@@ -1,0 +1,55 @@
+.container{
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the image fits within the box */
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: bold; /* Make the product name bold */
+  }
+  
+  .card-text {
+    margin-bottom: 15px;
+    color: black !important;
+  }
+  
+  .btn-group {
+    margin-top: 10px;
+  }
+  
+  .btn-group button {
+    margin-right: 10px;
+  }
+  
+  p.text-muted {
+    color: black !important;
+    font-size: medium;
+     font-weight: bold;  /*Make the price bold */
+  }
+  
+  /* To keep all elements in one line */
+  .d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+img{
+   
+    padding: 30px;
+}

@@ -10,7 +10,7 @@
         <input matInput type="password" [(ngModel)]="password" [ngModelOptions]="{ standalone: true }">
     </mat-form-field>
          <div *ngIf="error" class="error"><p>{{error}}</p></div>
-        <button type="submit" mat-raised-button color="primary">Login</button>
+        <button type="submit" mat-raised-button color="primary" >Login</button>
         <button type="button" mat-raised-button color="primary" (click)="opensignUp()">SignUp</button>       
 </form>
 </div>
