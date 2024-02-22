@@ -1,1 +1,29 @@
-<p>admin-page works!</p>
+
+<div class="container mt-3">
+<table class="table table-striped">
+    
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th class="wide-column">Image</th>
+                <th class="wide-column1">Actions</th>
+            </tr>
+    </thead>
+    <tbody>
+        @for(prod of products; track prod){
+        <tr>
+            <td>{{prod.id}}</td>
+            <td>{{prod.name}}</td>
+            <td>{{prod.price}}</td>
+            <td class="wide-column"><img src="{{prod.image}}" alt="Image" class="product-image"></td>
+            <td>
+                <button class="btn btn-warning">Update</button>
+                <button class="btn btn-danger" (click)="deleteItem(prod.id)">Delete</button>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>

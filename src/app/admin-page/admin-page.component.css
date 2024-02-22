@@ -1,0 +1,28 @@
+
+thead{
+    text-align: center;
+    font-size: larger;
+}
+
+.wide-column {
+     width: 300px;
+     text-align: center;
+}
+
+.wide-column1 {
+    width: 250px;
+    text-align: center;
+}
+
+td{
+    font-size: large;
+}
+
+.product-image {
+    max-width: 100px; /* Example: Limit image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+button{
+    margin: 20px;
+}

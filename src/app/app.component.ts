@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { UserPageComponent } from './user-page/user-page.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 @Component({
   selector: 'app-root',
@@ -22,8 +23,8 @@ import { UserPageComponent } from './user-page/user-page.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    UserPageComponent
-
+    UserPageComponent,
+    AdminPageComponent
   ],
   
   templateUrl: './app.component.html',

@@ -49,62 +49,69 @@
       "mail": "harshda@gmail.com"
     }
   ],
-
-  "products":[
-    {
+  "products": [
+    { 
+      "id":"1",
       "name": "Xiaomi Pad 6",
       "description": "Xiaomi Pad 6 having Snapdragon 870 Octa-Core Processor",
       "image": "/assets/Tablet1.jpg",
       "price": "28,000"
     },
     {
+      "id": "2",
       "name": "Samsung",
       "description": "Samsung having Snapdragon 870 Octa-Core Processor",
       "image": "/assets/Tablet2.jpg",
       "price": "62,000"
     },
     {
+      "id": "3",
       "name": "Moto",
       "description": "Moto having Snapdragon 870 Octa-Core Processor",
       "image": "/assets/Tablet3.jpg",
       "price": "34,000"
     },
     {
+      "id": "4",
       "name": "Honor",
       "description": "Honor having Snapdragon 870 Octa-Core Processor",
       "image": "/assets/Tablet4.jpg",
       "price": "45,000"
     },
     {
+      "id": "5",
       "name": "Vivo",
       "description": "Vivo having Snapdragon 870 Octa-Core Processor",
       "image": "/assets/Tablet5.jpg",
       "price": "57,000"
     },
     {
+      "id": "6",
       "name": "Apple",
       "description": "Apple having Snapdragon 870 Octa-Core Processor",
       "image": "/assets/Tablet7.jpg",
       "price": "45,000"
     },
     {
+      "id": "7",
       "name": "Samsung",
       "description": "Samsung having Snapdragon 870 Octa-Core Processor",
       "image": "/assets/Tablet8.jpg",
       "price": "1,12,000"
     },
     {
+      "id": "8",
       "name": "Lenovo",
       "description": "Lenovo having Snapdragon 870 Octa-Core Processor",
       "image": "/assets/Tablet9.jpg",
       "price": "45,000"
     },
     {
+      "id": "9",
       "name": "Oppo",
       "description": "Oppo having Snapdragon 870 Octa-Core Processor",
       "image": "/assets/Tablet10.jpg",
       "price": "30,000"
     }
   ]
-
 }
