@@ -53,9 +53,9 @@
     {
       "id": "1",
       "name": "Xiaomi Pad 6",
+      "price": "30,000",
       "description": "Xiaomi Pad 6 having Snapdragon 870 Octa-Core Processor",
-      "image": "/assets/Tablet1.jpg",
-      "price": "28,000"
+      "image": "/assets/Tablet1.jpg"
     },
     {
       "id": "2",
@@ -112,6 +112,13 @@
       "description": "Oppo having Snapdragon 870 Octa-Core Processor",
       "image": "/assets/Tablet10.jpg",
       "price": "30,000"
+    },
+    {
+      "id": "11",
+      "name": "Apple i-pad",
+      "description": "Apple i-pad having nice performance and high battery performance",
+      "image": "https://m.media-amazon.com/images/I/71ey-9D8yDL._AC_UL320_.jpg",
+      "price": "78000"
     }
   ]
 }

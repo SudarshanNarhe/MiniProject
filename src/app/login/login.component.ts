@@ -53,6 +53,8 @@ export class LoginComponent {
        }
       }else{
         this.error='Invalid username or password';
+        this.username='';
+        this.password='';
       }
     })
   }
