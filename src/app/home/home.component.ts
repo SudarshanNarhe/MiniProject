@@ -3,11 +3,12 @@ import { ProductsService } from '../products.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,HttpClientModule,FormsModule],
+  imports: [CommonModule,HttpClientModule,FormsModule,MatCardModule],
   providers:[ProductsService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

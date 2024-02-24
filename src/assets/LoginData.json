@@ -102,23 +102,30 @@
     {
       "id": "8",
       "name": "Lenovo",
+      "price": "65,000",
       "description": "Lenovo having Snapdragon 870 Octa-Core Processor",
-      "image": "/assets/Tablet9.jpg",
-      "price": "45,000"
+      "image": "/assets/Tablet9.jpg"
     },
     {
       "id": "9",
       "name": "Oppo",
+      "price": "35,000",
       "description": "Oppo having Snapdragon 870 Octa-Core Processor",
-      "image": "/assets/Tablet10.jpg",
-      "price": "30,000"
+      "image": "/assets/Tablet10.jpg"
     },
     {
       "id": "11",
       "name": "Apple i-pad",
+      "price": "70000",
       "description": "Apple i-pad having nice performance and high battery performance",
-      "image": "https://m.media-amazon.com/images/I/71ey-9D8yDL._AC_UL320_.jpg",
-      "price": "78000"
+      "image": "https://m.media-amazon.com/images/I/71ey-9D8yDL._AC_UL320_.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Samsung S8",
+      "description": "The product having the extra battery performance and more stability",
+      "image": "https://m.media-amazon.com/images/I/81Vs371KLML._AC_UY218_.jpg",
+      "price": "67000"
     }
   ]
 }

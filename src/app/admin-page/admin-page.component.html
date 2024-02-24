@@ -4,7 +4,7 @@
   </div>
   
   <!-- Form for adding new product --> 
-  <div *ngIf="showForm" class="container-fluid col-11 form-container">
+  <div *ngIf="showForm" class="container-fluid col-11 form-container" #formScroll>
     <form #productForm="ngForm" (ngSubmit)="productForm.form.valid &&  AddProduct(productForm)" novalidate > 
 
         <div class="form-group">
@@ -38,7 +38,7 @@
 
 <h3 >Product Details</h3>
 
-<div class="container mt-3">
+<div class="container">
 <table class="table table-striped">
     
         <thead class="thead-dark">
@@ -46,6 +46,7 @@
                 <th>ID</th>
                 <th>Product Name</th>
                 <th>Price</th>
+                <th>Description</th>
                 <th class="wide-column">Image</th>
                 <th class="wide-column1">Actions</th>
             </tr>
@@ -56,7 +57,8 @@
             <td>{{prod.id}}</td>
             <td>{{prod.name}}</td>
             <td>{{prod.price}}</td>
-            <td class="wide-column"><img src="{{prod.image}}" alt="Image" class="product-image"></td>
+            <td class="wide-column">{{prod.description}}</td>
+            <td class="center-image"><img src="{{prod.image}}" alt="Image" class="product-image"></td>
             <td>
                 <button class="btn btn-warning" (click)=" toggleforUpdate(prod)">Update</button>
                 <button class="btn btn-danger" (click)="deleteItem(prod.id)">Delete</button>

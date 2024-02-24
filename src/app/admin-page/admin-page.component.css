@@ -14,24 +14,31 @@ thead{
     font-size: larger;
 }
 
-.wide-column {
-     width: 300px;
-     text-align: center;
+.container {
+    width: 100%; /* Set the width of the container to 100% */
+    max-width: 1800px; /* Set a maximum width for the container if needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding for better spacing */
 }
 
-.wide-column1 {
-    width: 250px;
+
+ .wide-column {
+     width: 400px;
+}
+
+.center-image{
     text-align: center;
 }
+
 
 td{
     font-size: large;
 }
 
-.product-image {
-    max-width: 100px; /* Example: Limit image width */
-    height: auto; /* Maintain aspect ratio */
-}
+ .product-image {
+    max-width: 200px; 
+    max-height: auto; 
+} 
 
 button{
     margin: 20px;

@@ -1,55 +1,29 @@
-.container{
-    padding: 20px;
+.product-card {
+  transition: transform 0.3s ease;
 }
 
-.card {
-    width: 100%;
-    border: 1px solid #ddd;
-  }
-  
-  .card-img-top {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensure the image fits within the box */
-  }
-  
-  .card-body {
-    padding: 20px;
-  }
-  
-  .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-    font-weight: bold; /* Make the product name bold */
-  }
-  
-  .card-text {
-    margin-bottom: 15px;
-    color: black !important;
-  }
-  
-  .btn-group {
-    margin-top: 10px;
-  }
-  
-  .btn-group button {
-    margin-right: 10px;
-  }
-  
-  p.text-muted {
-    color: black !important;
-    font-size: medium;
-     font-weight: bold;  /*Make the price bold */
-  }
-  
-  /* To keep all elements in one line */
-  .d-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-img{
-   
-    padding: 30px;
+.product-card:hover {
+  transform: scale(1.05); /* Increase the size of the card on hover */
 }
+
+.image-container {
+  height: 200px; /* Set a fixed height for the image container */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.image-container img {
+  width: 100%; /* Ensure the image fills the container */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.card-title{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.card-price{
+  font-size: 17px;
+  font-weight: 400;
+}
+
+

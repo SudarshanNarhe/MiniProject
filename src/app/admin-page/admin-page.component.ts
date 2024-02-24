@@ -29,7 +29,9 @@ export class AdminPageComponent implements OnInit {
     description: '',
     image: '',
   };
-  productForm!: NgForm;
+
+  // productForm!: NgForm;
+  @ViewChild('productForm') productForm!:NgForm;
 
   constructor(public mySer: ProductsService) {}
 
@@ -58,8 +60,11 @@ export class AdminPageComponent implements OnInit {
           (response) => {
             console.log('Product added successfully:', response);
             alert('Product added successfully!!!');
-            this.productForm.reset();
             this.getAllProducts();
+            this.showForm=!this.showForm;
+            this.isUpdate=false;
+            this.clearForm();
+           // window.location.reload();
           },
           (error) => {
             console.error('Error adding product: ', error);
@@ -70,12 +75,13 @@ export class AdminPageComponent implements OnInit {
     }
       else{
       this.newProduct = newProductForm.value;
-      
       this.mySer.AddItems(this.newProduct).subscribe(
         (response) => {
           console.log('Product added successfully:', response);
           alert('Product added successfully!!!');
-          this.productForm.reset();
+          this.getAllProducts();
+          this.showForm=!this.showForm;
+          this.clearForm();
           this.getAllProducts();
         },
         (error) => {
@@ -89,7 +95,11 @@ export class AdminPageComponent implements OnInit {
     }
   }
 
-  @ViewChild('productForm') productFormElement!: ElementRef;
+  clearForm(){
+    this.productForm.resetForm();
+  }
+
+  @ViewChild('formScroll') productFormElement!: ElementRef;
 
   
 
@@ -104,7 +114,7 @@ export class AdminPageComponent implements OnInit {
 
   scrollToForm() {
     if (this.productFormElement && this.productFormElement.nativeElement) {
-      this.productFormElement.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.productFormElement.nativeElement.scrollIntoView({ behavior: 'smooth'});
     }
   }
 
