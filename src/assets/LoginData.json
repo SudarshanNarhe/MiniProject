@@ -47,6 +47,14 @@
       "username": "harshadapatil",
       "password": "Harshada#111",
       "mail": "harshda@gmail.com"
+    },
+    {
+      "id": "4278",
+      "firstName": "User",
+      "lastName": "User",
+      "username": "User@123",
+      "password": "User@123",
+      "mail": "user@gmail.com"
     }
   ],
   "products": [

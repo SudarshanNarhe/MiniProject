@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -17,13 +18,17 @@ export class HomeComponent {
 
   products: Product[] = []; 
 
-  constructor(public mySer: ProductsService){
+  constructor(public mySer: ProductsService, public router : Router){
 
   }
 
   ngOnInit(): void {
     this.mySer.getAllProduct().subscribe(prod =>{this.products=prod})
     console.log(this.products)
+ }
+
+ showLoginPage(){
+  this.router.navigate(['/Login']);
  }
  
 }
