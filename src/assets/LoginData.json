@@ -55,6 +55,14 @@
       "username": "User@123",
       "password": "User@123",
       "mail": "user@gmail.com"
+    },
+    {
+      "id": "9478",
+      "firstName": "Shubhangi",
+      "lastName": "Kolekar",
+      "username": "shubhkolekar",
+      "password": "Subh@123",
+      "mail": "shubh@gmail.com"
     }
   ],
   "products": [
@@ -131,9 +139,9 @@
     {
       "id": "12",
       "name": "Samsung S8",
+      "price": "65000",
       "description": "The product having the extra battery performance and more stability",
-      "image": "https://m.media-amazon.com/images/I/81Vs371KLML._AC_UY218_.jpg",
-      "price": "67000"
+      "image": "https://m.media-amazon.com/images/I/81Vs371KLML._AC_UY218_.jpg"
     }
   ]
 }
