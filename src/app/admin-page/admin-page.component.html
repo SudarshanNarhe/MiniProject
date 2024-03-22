@@ -9,7 +9,7 @@
 
         <div class="form-group">
             <label for="productId" class="form-label">Product Id</label>
-            <input type="text" class="form-control" id="productId" [(ngModel)]="newProduct.id" name="id" required>
+            <input type="text" class="form-control" id="productId" [(ngModel)]="newProduct.id" name="id">
           </div>
 
       <div class="form-group">
@@ -22,11 +22,11 @@
       </div>
       <div class="form-group">
         <label for="productDescription">Product Description</label>
-        <textarea class="form-control" id="productDescription" [(ngModel)]="newProduct.description" name="description" rows="3" required></textarea>
+        <textarea class="form-control" id="productDescription" [(ngModel)]="newProduct.desc" name="desc" rows="3"></textarea>
       </div>
       <div class="form-group">
         <label for="productImage">Product Image URL</label>
-        <input type="text" class="form-control" id="productImage" [(ngModel)]="newProduct.image" name="image" required>
+        <input type="text" class="form-control" id="productImage" [(ngModel)]="newProduct.image" name="image">
       </div>
       <button type="submit" class="btn btn-dark btn-group" *ngIf="!isUpdate" >Add New Product</button>
       <button type="submit" class="btn btn-dark btn-group" *ngIf="isUpdate">Update Information</button>
@@ -57,7 +57,7 @@
             <td>{{prod.id}}</td>
             <td>{{prod.name}}</td>
             <td>{{prod.price}}</td>
-            <td class="wide-column">{{prod.description}}</td>
+            <td class="wide-column">{{prod.desc}}</td>
             <td class="center-image"><img src="{{prod.image}}" alt="Image" class="product-image"></td>
             <td>
                 <button class="btn btn-warning" (click)=" toggleforUpdate(prod)">Update</button>

@@ -31,7 +31,7 @@ export class UserPageComponent implements OnInit{
 export interface Product {
   id:string;
   name: string;
-  description: string;
+  desc: string;
   image: string;
   price: string;
 }

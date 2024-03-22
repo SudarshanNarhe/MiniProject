@@ -10,9 +10,9 @@
     <form #contactForm="ngForm" (ngSubmit)="contactForm.form.valid && onSubmit()" novalidate>
         
         <div class="form-group">
-            <label for="firstName">First Name : </label> 
-            <input type="text" name="firstName" required #firstName="ngModel"
-            [(ngModel)]="Mycontact.firstName" class="form-control" id="firstName">
+            <label for="firstname">First Name : </label> 
+            <input type="text" name="firstname" required #firstName="ngModel"
+            [(ngModel)]="Mycontact.firstname" class="form-control" id="firstname">
         </div>
         <div *ngIf="!firstName.valid && (firstName.dirty || firstName.touched)" class="error">
             <div *ngIf="firstName.errors?.['required']">
@@ -20,9 +20,9 @@
             </div>
         </div>
             <div class="form-group">
-                <label for="lastName">Last Name : </label> 
-                <input type="text" name="lastName" required #lastName="ngModel"
-                [(ngModel)]="Mycontact.lastName" class="form-control" id="lastName">
+                <label for="lastname">Last Name : </label> 
+                <input type="text" name="lastname" required #lastName="ngModel"
+                [(ngModel)]="Mycontact.lastname" class="form-control" id="lastname">
             </div>
             <div *ngIf="!lastName.valid && (lastName.dirty || lastName.touched)" class="error">
                 <div *ngIf="lastName.errors?.['required']">

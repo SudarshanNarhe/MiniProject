@@ -26,7 +26,7 @@ export class AdminPageComponent implements OnInit {
     id: '',
     name: '',
     price: '',
-    description: '',
+    desc: '',
     image: '',
   };
 
@@ -51,15 +51,16 @@ export class AdminPageComponent implements OnInit {
   }
 
   AddProduct(newProductForm: NgForm) {
-    // console.log(newProductForm.value)
-
+    console.log('In add product')
+    console.log(newProductForm.value)
+    
     if (newProductForm.valid) {
       if (this.isUpdate) {
         this.newProduct = newProductForm.value;
         this.mySer.UpdateData(this.newProduct.id, this.newProduct).subscribe(
           (response) => {
-            console.log('Product added successfully:', response);
-            alert('Product added successfully!!!');
+            console.log('Product Update successfully:', response);
+            alert('Product Update successfully!!!');
             this.getAllProducts();
             this.showForm=!this.showForm;
             this.isUpdate=false;
@@ -67,8 +68,8 @@ export class AdminPageComponent implements OnInit {
            // window.location.reload();
           },
           (error) => {
-            console.error('Error adding product: ', error);
-            alert('Error adding product.... ');
+            console.error('Error updating product: ', error);
+            alert('Error updating product.... ');
           }
         );
       
@@ -94,6 +95,7 @@ export class AdminPageComponent implements OnInit {
       alert('Please fill in all required fields');
     }
   }
+
 
   clearForm(){
     this.productForm.resetForm();

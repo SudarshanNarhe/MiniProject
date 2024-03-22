@@ -42,11 +42,11 @@ export class LoginComponent {
 
   login(){
     this.error='';
-    this.mySer.getData().subscribe((result: { username: string, password: string }[])=>{
-      const user=result.find(u =>u.username===this.username && u.password===this.password);
+    this.mySer.getData().subscribe((result: { email: string, password: string }[])=>{
+      const user=result.find(u =>u.email===this.username && u.password===this.password);
       if(user){
        console.log('Login Succesful')
-       if(user.username=='admin' && user.password=='admin'){
+       if(user.email=='admin@mail.com' && user.password=='admin@123'){
             this.router.navigate(['/AdminPage'])
        }else{
           this.router.navigate(['/UserPage'])

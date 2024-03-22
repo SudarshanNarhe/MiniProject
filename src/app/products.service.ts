@@ -6,20 +6,22 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductsService {
-  url = 'http://localhost:3000/products';
+//  url = 'http://localhost:3000/products';
+
+  url:string="http://localhost:8080/product/"
 
   constructor(public myHttp: HttpClient) {}
 
   getAllProduct(): Observable<any> {
-    return this.myHttp.get<any>(this.url);
+    return this.myHttp.get<any>(this.url+"getallproducts");
   }
 
   deleteItem(id: any): Observable<any> {
-    return this.myHttp.delete<any>(this.url + '/' + id).pipe(catchError(this.errorHandler));
+    return this.myHttp.delete<any>(this.url+"deleteProduct" + '/' + id).pipe(catchError(this.errorHandler));
   }
 
   UpdateData(id:any, data:any):Observable<any>{
-    return this.myHttp.put<any>(`${this.url}/${id}`,data).pipe(catchError(this.errorHandler))
+    return this.myHttp.put<any>(`${this.url+"updateProduct"}/${id}`,data).pipe(catchError(this.errorHandler))
   }
 
   AddItems(data:any):Observable<any>{
@@ -27,11 +29,11 @@ export class ProductsService {
     let itemsdetails={
       id:data.id,
       name:data.name,
-      description:data.description,
+      desc:data.desc,
       image:data.image,
       price:data.price
     }
-    return this.myHttp.post(this.url,itemsdetails).pipe(catchError(this.errorHandler))
+    return this.myHttp.post(this.url+"saveProduct",itemsdetails).pipe(catchError(this.errorHandler))
   }
 
   errorHandler(error: any) {

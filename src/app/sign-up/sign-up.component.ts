@@ -27,8 +27,8 @@ constructor(public myUser : LoginDataService, public msg:MatSnackBar, private ro
 
   ngOnInit(): void {
       this.Mycontact={
-        firstName:"",
-        lastName:"",
+        firstname:"",
+        lastname:"",
         username:"",
         email:"",
         password:"",
