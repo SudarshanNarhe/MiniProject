@@ -6,7 +6,7 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductsService {
-//  url = 'http://localhost:3000/products';
+  //url = 'http://localhost:3000/products';
 
   url:string="http://localhost:8080/product/"
 

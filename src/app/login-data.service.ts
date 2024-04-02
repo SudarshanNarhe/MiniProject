@@ -6,7 +6,7 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginDataService {
-
+ 
   url="http://localhost:8080/user/"
 
   constructor(public myClient:HttpClient) {
