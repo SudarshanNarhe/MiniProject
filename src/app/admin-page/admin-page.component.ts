@@ -57,6 +57,7 @@ export class AdminPageComponent implements OnInit {
     if (newProductForm.valid) {
       if (this.isUpdate) {
         this.newProduct = newProductForm.value;
+        console.log(this.newProduct);
         this.mySer.UpdateData(this.newProduct.id, this.newProduct).subscribe(
           (response) => {
             console.log('Product Update successfully:', response);
