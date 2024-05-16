@@ -6,6 +6,7 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductsService {
+
   //url = 'http://localhost:3000/products';
 
   url:string="http://localhost:8080/product/"
@@ -14,14 +15,19 @@ export class ProductsService {
 
   getAllProduct(): Observable<any> {
     return this.myHttp.get<any>(this.url+"getallproducts");
+   // return this.myHttp.get<any>(this.url);
   }
 
   deleteItem(id: any): Observable<any> {
     return this.myHttp.delete<any>(this.url+"deleteProduct" + '/' + id).pipe(catchError(this.errorHandler));
+    //return this.myHttp.delete<any>(this.url+ '/' + id).pipe(catchError(this.errorHandler));
+
   }
 
   UpdateData(id:any, data:any):Observable<any>{
     return this.myHttp.put<any>(`${this.url+"updateProduct"}/${id}`,data).pipe(catchError(this.errorHandler))
+   // return this.myHttp.put<any>(`${this.url}/${id}`,data).pipe(catchError(this.errorHandler))
+
   }
 
   AddItems(data:any):Observable<any>{
@@ -34,6 +40,8 @@ export class ProductsService {
       price:data.price
     }
     return this.myHttp.post(this.url+"saveProduct",itemsdetails).pipe(catchError(this.errorHandler))
+    //return this.myHttp.post(this.url,itemsdetails).pipe(catchError(this.errorHandler));
+
   }
 
   errorHandler(error: any) {

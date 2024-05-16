@@ -6,6 +6,8 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginDataService {
+
+  //url = 'http://localhost:3000/data';
  
   url="http://localhost:8080/user/"
 
@@ -15,6 +17,7 @@ export class LoginDataService {
 
    getData():Observable<any>{
     return this.myClient.get<any>(this.url+"getAllUser");
+    //return this.myClient.get<any>(this.url);
    }
 
    AddUser(User:any):Observable<any>{
@@ -28,7 +31,8 @@ export class LoginDataService {
       userrole:'User'
     }
     return this.myClient.post<any>(this.url+"saveUser",userdata).pipe(catchError(this.errorHandler));
-   }
+    // return this.myClient.post<any>(this.url,userdata).pipe(catchError(this.errorHandler));
+  }
 
    errorHandler(error:any){
       let errormsg="";
