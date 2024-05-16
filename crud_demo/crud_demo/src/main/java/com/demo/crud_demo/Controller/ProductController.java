@@ -61,7 +61,7 @@ public class ProductController {
 	}
 	
 	
-	@PutMapping("/updateProduct")
+	@PutMapping("/updateProduct/{id}")
 	public Product updateProduct(@RequestBody Product p) {
 		System.out.println("Inside updateProduct");
 		Product res = null;
